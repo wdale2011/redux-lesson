@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 export default class AddCardForm extends Component {
-  static propTypes = {
-    addCard: PropTypes.func.isRequired,
-    boardIndex: PropTypes.number.isRequired,
-  }
-
   constructor(props) {
     super(props)
     this.state = {
@@ -16,7 +10,7 @@ export default class AddCardForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    this.props.addCard(this.state.inputValue, this.props.boardIndex)
+    console.log('submitting...')
     this.setState({ inputValue: '' })
   }
 

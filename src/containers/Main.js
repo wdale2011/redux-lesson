@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import Board from './Board'
 
 const Main = ({ boards }) => (
@@ -20,10 +19,4 @@ Main.propTypes = {
   boards: PropTypes.arrayOf(PropTypes.string),
 }
 
-const mapStateToProps = state => ({
-  boards: state.boards,
-})
-
-const ConnectedMain = connect(mapStateToProps)(Main)
-
-export default ConnectedMain
+export default Main

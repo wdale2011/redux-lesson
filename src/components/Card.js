@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Card = ({ card, removeCard }) => (
+const Card = ({ card }) => (
   <div
     style={{
       margin: '10px 0px',
@@ -21,7 +21,7 @@ const Card = ({ card, removeCard }) => (
         fontSize: '1rem',
         cursor: 'pointer',
       }}
-      onClick={() => removeCard(card.id)}
+      onClick={() => console.log('clicking...')}
     >
       &times;
     </button>
@@ -30,7 +30,6 @@ const Card = ({ card, removeCard }) => (
 
 Card.propTypes = {
   card: PropTypes.object,
-  removeCard: PropTypes.func,
 }
 
 export default Card
